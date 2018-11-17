@@ -1,6 +1,6 @@
 pragma  solidity 0.4.25;
 
-contract eleiçãoCipa {
+contract eleicaoCipa { 
     struct candidato {
         uint id;
         string name;
@@ -11,7 +11,7 @@ contract eleiçãoCipa {
     mapping(address => bool) public votantes;
     // Armazena lista de candidatos
     // Busca o candidato
-    mapping(uint => Candidato) public candidatos;
+    mapping(uint => candidato) public candidatos;
     // Armazena contagem dos candidatos
     uint public contagemCandidatos;
 
@@ -19,15 +19,15 @@ contract eleiçãoCipa {
         uint indexed _candidatoId
     );
 
-    function Eleição() public {
-        addCandidato("Fulano De Tal");
-        addCandidato("Beltrano De Tal");
-        addCandidato("Sicrano De Tal");
+    function Eleicao() public {
+        addCandidate("Fulano De Tal");
+        addCandidate("Beltrano De Tal");
+        addCandidate("Sicrano De Tal");
     }
 
     function addCandidate(string _name) private {
         contagemCandidatos++;
-        candidatos[contagemCandidatos] = Candidato(contagemCandidatos, _name, 0);
+        candidatos[contagemCandidatos] = candidato(contagemCandidatos, _name, 0);
     }
 
     function votar (uint _candidatoId) public {
@@ -38,7 +38,7 @@ contract eleiçãoCipa {
         // Grava o voto
         votantes[msg.sender] = true;
         // Atualiza a contagem dos votos dos candidatos
-        candidatos[_candidatoId].contagemCandidatos++; 
+        candidatos [_candidatoId].contagemVotos++; 
         // Dispara a condição de votou
         emit votou(_candidatoId);
     }
