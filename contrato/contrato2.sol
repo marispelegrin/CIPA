@@ -20,7 +20,7 @@ contract eleiçãoCipa {
     );
 
     function Eleição() public {
-        addCandidato("Fulano De Tal ");
+        addCandidato("Fulano De Tal");
         addCandidato("Beltrano De Tal");
         addCandidato("Sicrano De Tal");
     }
