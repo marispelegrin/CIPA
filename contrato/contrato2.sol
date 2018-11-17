@@ -20,8 +20,9 @@ contract eleiçãoCipa {
     );
 
     function Eleição() public {
-        addCandidato("Donald Trump");
-        addCandidato("Hillary Clinton");
+        addCandidato("Fulano De Tal ");
+        addCandidato("Beltrano De Tal");
+        addCandidato("Sicrano De Tal");
     }
 
     function addCandidate(string _name) private {
