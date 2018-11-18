@@ -20,9 +20,9 @@ contract eleicaoCipa {
     );
 
     function Eleicao() public {
-        addCandidate("Fulano De Tal");
-        addCandidate("Beltrano De Tal");
-        addCandidate("Sicrano De Tal");
+        addCandidate(1 == "Fulano De Tal");
+        addCandidate(2 == "Beltrano De Tal");
+        addCandidate(3 == "Sicrano De Tal");
     }
 
     function addCandidate(string _name) private {
