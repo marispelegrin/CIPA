@@ -1,4 +1,49 @@
 <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Calcule seu décimo terceiro salário</h1>
+    <form id="formDecTerc" name="formDecTerc">
+        <div>
+            <label for="valorSalario">💲 Valor do salário (em R$) </label>:
+            <input type="text" name="valorSalario" id="valorSalario">
+        </div>
+        <div>
+            <label for="meses">Mês de início da atividade laboral</label>:
+            <select name="meses" id="meses">
+                <option value="" selected></option>
+                <option value="janeiro">JAN</option>
+                <option value="fevereiro">FEV</option>
+                <option value="marco">MAR</option>
+                <option value="abril">ABR</option>
+                <option value="maio">MAI</option>
+                <option value="junho">JUN</option>
+                <option value="julho">JUL</option>
+                <option value="agosto">AGO</option>
+                <option value="setembro">SET</option>
+                <option value="outubro">OUT</option>
+                <option value="novembro">NOV</option>
+                <option value="dezembro">DEZ</option>
+            </select>
+        </div>
+        <div id="divBotao">
+            <button onclick="calcularValor();return false;"> Calcular </button>
+        </div>
+    </form>
+    <div id="calculo"> </div>
+    <script src="script.js"> </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>Hello World DApp</title>
