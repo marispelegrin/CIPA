@@ -8,6 +8,7 @@ div {
     margin-top: 50px;
     margin-left: 50px;
 }
+
 thead {
     display: table-header-group;
     vertical-align: middle;
