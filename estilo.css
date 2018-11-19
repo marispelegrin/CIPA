@@ -12,5 +12,5 @@ div {
 thead {
     display: table-header-group;
     vertical-align: middle;
-    border-color: inherit;
+    border-color: whitesmoke;
 }
