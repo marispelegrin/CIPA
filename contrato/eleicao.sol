@@ -1,11 +1,10 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.25;
 
-contract Election {
-    //Model a Candidate
-    struct Candidate {
+contract Eleicao {
+    struct Candidato {
         uint id;
-        string name;
-        uint voteCount;
+        string nome;
+        uint contagemVotos;
     }
 
     //Store account that have voted
