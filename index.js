@@ -3,14 +3,14 @@ abi = JSON.parse('[{"constant":false,"inputs":[{"name":"candidate","type":"bytes
 VotingContract = web3.eth.contract(abi);
 // In your nodejs console, execute contractInstance.address to get the address at which the contract is deployed and change the line below to use your deployed address
 
-contractInstance = VotingContract.at('0x4a9c1d265d06d47e8f7b03ffa234a918ccf622');
-candidates = {"Fulano De Tal": "candidato-1", "Beltrano De Tal": "candidato-2", "Sicrano De Tal": "candidato-3"};
+EleicaoCipa = VotingContract.at('0x692a70d2e424a56d2c6c27aa97d1a86395877b3a');
+candidatos = {"Fulano De Tal": "candidato1", "Beltrano De Tal": "candidato2", "Sicrano De Tal": "candidato3"};
 
 function votar() {
     candidatoId = $("#candidato").val();
-    contractInstance.votar(candidatoId, {from: web3.eth.accounts[0]}, function() {
+    EleicaoCipa.votar(candidatoId, {from: web3.eth.accounts[0]}, function() {
         let div_id = candidato[candidatoId];
-        $("#" + div_id).html(contractInstance.totalVotesForCandidate.call(candidatoId).toString());
+        $("#" + div_id).html(EleicaoCipa.totalVotesForCandidate.call(candidatoId).toString());
     });
 }
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
     candidatoId = Object.keys(candidatos);
     for (var i = 0; i < candidatoId.length; i++) {
         let name = candidateNames[i];
-        let val = contractInstance.totalVotesFor.call(name).toString();
+        let val = EleicaoCipa.totalVotesFor.call(name).toString();
         $("#" + candidato[nome]).html(val);
     }
 });
