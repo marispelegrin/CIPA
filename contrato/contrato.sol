@@ -1,9 +1,9 @@
-pragma  solidity 0.4.25;
+pragma  solidity ^0.4.25;
 
 contract eleicaoCipa { 
     struct candidato {
         uint id;
-        string name;
+        string nome;
         uint contagemVotos;
     }
 
